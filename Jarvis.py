@@ -1,10 +1,10 @@
 import time
 from numberguessing import *
-# import pyttsx3
+import pyttsx3
 # import speech_recognition as sr
 import os
 # import wikipedia
-# import webbrowser
+import webbrowser
 # import datetime
 from commands import *
 
@@ -118,98 +118,49 @@ if __name__ == '__main__':
         elif 'google' in query :
             print('searching Google.....')
             speak('searching Google.....')
-            query = query.replace('search google for', '')
-            webbrowser.open('https://www.google.com/search?q=' + query)
-            speak(f'searched google for {query}')
-            os.system('cls')
-        elif 'google' in query :
-            print('searching Google.....')
-            speak('searching Google.....')
-            query = query.replace('search google for', '')
+            query = query.replace('google', '')
             webbrowser.open('https://www.google.com/search?q=' + query)
             speak(f'searched google for {query}')
             os.system('cls')
         elif 'youtube' in query :
             print('searching YouTube....')
             speak('searching YouTube.....')
-            query = query.replace('search youtube for', '')
-            webbrowser.open('https://www.youtube.com/results?search_query=' + query)
-            speak(f'Youtube google for {query}')
-            os.system('cls')
-        elif 'youtube' in query :
-            print('searching YouTube....')
-            speak('searching YouTube.....')
-            query = query.replace('search youtube per', '')
+            query = query.replace('youtube', '')
             webbrowser.open('https://www.youtube.com/results?search_query=' + query)
             speak(f'Youtube google for {query}')
             os.system('cls')
         elif 'stack overflow' in query :
             print('searching stackoverflow.....')
             speak('searching stackoverflow.....')
-            query = query.replace('search stack overflow for', '')
-            webbrowser.open('https://stackoverflow.com/search?q=' + query)
-            speak(f'searched stackoverflow for {query}')
-            os.system('cls')
-        elif 'stack overflow' in query :
-            print('searching stackoverflow.....')
-            speak('searching stackoverflow.....')
-            query = query.replace('search stack overflow per', '')
+            query = query.replace('stack overflow', '')
             webbrowser.open('https://stackoverflow.com/search?q=' + query)
             speak(f'searched stackoverflow for {query}')
             os.system('cls')
         elif 'stackoverflow' in query :
             print('searching stackoverflow.....')
             speak('searching stackoverflow.....')
-            query = query.replace('search stackoverflow for', '')
-            webbrowser.open('https://stackoverflow.com/search?q=' + query)
-            speak(f'searched stackoverflow for {query}')
-            os.system('cls')
-        elif 'stackoverflow' in query :
-            print('searching stackoverflow.....')
-            speak('searching stackoverflow.....')
-            query = query.replace('search stackoverflow per', '')
+            query = query.replace('stackoverflow', '')
             webbrowser.open('https://stackoverflow.com/search?q=' + query)
             speak(f'searched stackoverflow for {query}')
             os.system('cls')
         elif 'brainly' in query :
             print('searching brainly.....')
             speak('searching brainly.....')
-            query = query.replace('search brainly for', '')
-            webbrowser.open('https://brainly.in/app/ask?entry=hero&q=' + query)
-            speak(f'searched brainly for {query}')
-            os.system('cls')
-        elif 'brainly' in query :
-            print('searching brainly.....')
-            speak('searching brainly.....')
-            query = query.replace('search brainly per', '')
+            query = query.replace('brainly', '')
             webbrowser.open('https://brainly.in/app/ask?entry=hero&q=' + query)
             speak(f'searched brainly for {query}')
             os.system('cls')
         elif 'quora' in query :
             print('searching quora.....')
             speak('searching quora.....')
-            query = query.replace('search quora for', '')
-            webbrowser.open('https://www.quora.com/search?q=' + query)
-            speak(f'searched quora for {query}')
-            os.system('cls')
-        elif 'quora' in query :
-            print('searching quora.....')
-            speak('searching quora.....')
-            query = query.replace('search quora per', '')
+            query = query.replace('quora', '')
             webbrowser.open('https://www.quora.com/search?q=' + query)
             speak(f'searched quora for {query}')
             os.system('cls')
         elif 'github' in query :
             print('searching github.....')
             speak('searching github')
-            query = query.replace('search github for', '')
-            webbrowser.open('https://github.com/search?q=' + query)
-            speak(f'searched github for {query}')
-            os.system('cls')
-        elif 'github' in query :
-            print('searching github.....')
-            speak('searching github')
-            query = query.replace('search github per', '')
+            query = query.replace('github', '')
             webbrowser.open('https://github.com/search?q=' + query)
             speak(f'searched github for {query}')
             os.system('cls')
@@ -235,6 +186,8 @@ if __name__ == '__main__':
         elif 'game' in query :
             spr('opening the numberguessing game')
             game()
+        elif 'join class' in query :
+            os.startfile('H:\\Rohith\\backend\\automate_practically\\main.py')
         else :
             time.sleep(1)
             os.system('cls')
