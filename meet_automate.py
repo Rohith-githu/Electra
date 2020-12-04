@@ -22,6 +22,6 @@ def main():
     copy_btn = pyautogui.locateCenterOnScreen('copy_info.png')
     pyautogui.moveTo(copy_btn)
     pyautogui.click()
-    speak('meeting info copied to cilpboard')
+    speak('meeting info copied to clipboard')
 
 main()
