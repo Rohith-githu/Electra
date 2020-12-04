@@ -187,7 +187,7 @@ if __name__ == '__main__':
             spr('opening the numberguessing game')
             game()
         elif 'join class' in query :
-            os.startfile('H:\\Rohith\\backend\\automate_practically\\main.py')
+            os.startfile('main.py')
         else :
             time.sleep(1)
             os.system('cls')
