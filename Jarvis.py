@@ -54,12 +54,6 @@ if __name__ == '__main__':
             os.startfile("C:\\Users\\rohit\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe")
             speak('vscode is now opened.')
             os.system('cls')
-        elif 'open atom' in query :
-            print('opening atom...')
-            speak('opening atom...')
-            os.startfile('C:\\Users\\rohit.ANUMALASETTY\\AppData\\Local\\atom\\atom.exe')
-            speak('atom is now opened')
-            os.system('cls')
         elif 'the time' in query :
             strtime = datetime.datetime.now().strftime('%H:%M')
             print(f'the time is {strtime}')
@@ -188,6 +182,8 @@ if __name__ == '__main__':
             game()
         elif 'join class' in query :
             os.startfile('main.py')
+        elif 'start an instant meet' in query :
+            os.startfile('meet_automate.py')
         else :
             time.sleep(1)
             os.system('cls')
