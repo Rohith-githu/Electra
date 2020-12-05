@@ -33,3 +33,10 @@ def takeCommand() :
         print('Please say that again...')
         return 'None'
     return query
+
+def refresh_web_page():
+    import pyautogui
+    refresh = pyautogui.locateCenterOnScreen('pagerefresh.png')
+    pyautogui.moveTo(refresh)
+    pyautogui.click()
+

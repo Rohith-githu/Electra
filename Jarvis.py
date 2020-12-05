@@ -176,10 +176,16 @@ if __name__ == '__main__':
         elif 'game' in query :
             sp('opening the numberguessing game')
             game()
+            os.system('cls')
         elif 'join class' in query :
             os.startfile('main.py')
+            os.system('cls')
         elif 'start an instant meet' in query :
             os.startfile('meet_automate.py')
+            os.system('cls')
+        elif 'refresh web page' in query :
+            refresh_web_page()
+            os.system('cls')
         else :
             time.sleep(1)
             os.system('cls')
