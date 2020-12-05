@@ -158,27 +158,23 @@ if __name__ == '__main__':
             webbrowser.open('https://github.com/search?q=' + query)
             speak(f'searched github for {query}')
             os.system('cls')
-        elif 'meaning' in query :
-            query = query.replace('what is the meaning of', '')
-            spr(f'the meaning of {query} is {meaning(query)}')
-            os.system('cls')
         elif 'open zoom' in query :
-            spr('opening zoom...')
+            sp('opening zoom...')
             os.startfile('C:\\Users\\rohit.ANUMALASETTY\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe')
             os.system('cls')
         elif 'what\'s your name' in query :
-            spr('I dont have a name but i work for Rohith')
+            sp('I dont have a name but i work for Rohith')
             os.system('cls')
         elif 'what are you doing' in query :
             import random
             choices1 = ['I am checking for bugs in my code to get you experienced more','I am looking for new features to get more developed','I am checking the code bugs while opening apps, you can also open apps with help of me']
-            spr(random.choice(choices1))
+            sp(random.choice(choices1))
             os.system('cls')
         elif 'what can you do' in query :
-            spr('I can open apps, and serach google,brainly,youtube,stackoverlow,quora,github for you, and get results from wikipedia. and there are many features going to be added in me')
+            sp('I can open apps, and serach google,brainly,youtube,stackoverlow,quora,github for you, and get results from wikipedia. and there are many features going to be added in me')
             os.system('cls')
         elif 'game' in query :
-            spr('opening the numberguessing game')
+            sp('opening the numberguessing game')
             game()
         elif 'join class' in query :
             os.startfile('main.py')

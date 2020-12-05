@@ -1,18 +1,10 @@
-import pyttsx3
+from pyttsx3 import *
 import speech_recognition as sr
 import os
 import wikipedia
 import webbrowser
 import datetime
 
-engine = pyttsx3.init('sapi5')
-def spr(amount) :
-    print(amount)
-    engine.say(amount)
-    engine.runAndWait()
-def speak(audio) :
-    engine.say(audio)
-    engine.runAndWait()
 def wishme():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour <=12 :
@@ -24,9 +16,8 @@ def wishme():
     elif hour >= 16 and hour < 20 :
         print('Good Evening!')
         speak('Good Evening sir, what can i help you with')
-def meaning(word) :
-    dictionary = PyDictionary()
-    dictionary.meaning(word)
+    else :
+        sp('Ohh it\'s not a time to work with PC')
 def takeCommand() :
     # take's input from microphone to execyte the command
     r = sr.Recognizer()
