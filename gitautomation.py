@@ -1,0 +1,46 @@
+import pyautogui, time, pyperclip, webbrowser
+from github_repository_create import *
+
+def automation_git() :
+    ask_path = input("Please enter the path to clone the github repository: ")
+    webbrowser.open('https://www.github.com')
+    time.sleep(7)
+
+    name = input('Enter the repository name :')
+
+    new_create = pyautogui.locateCenterOnScreen('new_repo.png')
+    pyautogui.moveTo(new_create)
+    pyautogui.click()
+    time.sleep(5)
+    repo_blank = pyautogui.locateCenterOnScreen('repo_blank.png')
+    pyautogui.moveTo(repo_blank)
+    pyautogui.click()
+    pyautogui.write(name)
+
+    new_create = pyautogui.locateCenterOnScreen('repo_create.png')
+    pyautogui.moveTo(new_create)
+    pyautogui.click()
+    # time.sleep(6)
+    # copyurl = pyautogui.locateCenterOnScreen('repo_create.png')
+    # pyautogui.moveTo(copyurl)
+    # pyautogui.click()
+    time.sleep(5)
+    windows_search = pyautogui.locateCenterOnScreen('searcher.png')
+    pyautogui.moveTo(windows_search)
+    pyautogui.click()
+    time.sleep(5)
+    pyautogui.write('powershell')
+    pyautogui.press('enter')
+    time.sleep(5)
+    violet_back = pyautogui.locateCenterOnScreen('violet_back.png')
+    pyautogui.moveTo(violet_back)
+    pyautogui.click()
+    pyautogui.write(f'cd h:')
+    pyautogui.press('enter')
+    time.sleep(3)
+    pyautogui.click()
+    pyautogui.write(f'cd {ask_path}')
+    pyautogui.write(f'git clone https://github.com/Rohith-githu/{name}.git')
+    pyautogui.press('enter')
+
+repository()
