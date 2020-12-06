@@ -3,7 +3,7 @@ import webbrowser
 from pyttsx3 import *
 def join_class() :
     webbrowser.open("https://www.practically.com")
-    time.sleep(8)
+    time.sleep(10)
     var1 = pyautogui.locateCenterOnScreen('var1.png')
     pyautogui.moveTo(var1)
     pyautogui.click()
