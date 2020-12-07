@@ -180,7 +180,7 @@ if __name__ == '__main__':
         elif 'join class' in query :
             os.startfile('main.py')
             os.system('cls')
-        elif 'start an instant meet' in query :
+        elif 'instant meet' in query :
             os.startfile('meet_automate.py')
             os.system('cls')
         elif 'refresh web page' in query :
