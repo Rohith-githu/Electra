@@ -194,4 +194,4 @@ if __name__ == '__main__':
             os.startfile('github_repository_create.py')
         else :
             time.sleep(1)
-            os.system('cls')
+            os.system('clear()')
