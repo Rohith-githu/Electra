@@ -189,6 +189,7 @@ if __name__ == '__main__':
         elif 'open explorer' in query :
             webbrowser.open('c://users/rohith')
         elif "create a repo" in query :
+            speak('starting repository creator')
             os.startfile('github_repository_create.py')
         else :
             time.sleep(1)
