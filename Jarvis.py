@@ -1,3 +1,4 @@
+import practically
 import time
 from numberguessing import *
 import pyttsx3
@@ -177,8 +178,8 @@ if __name__ == '__main__':
             sp('opening the numberguessing game')
             game()
             os.system('cls')
-        elif 'join class' in query :
-            os.startfile('main.py')
+        elif 'class' in query :
+            practically.join_practically()
             os.system('cls')
         elif 'instant meet' in query :
             os.startfile('meet_automate.py')
