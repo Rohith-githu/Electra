@@ -1,3 +1,6 @@
+import pywhatkit
+from pywhatkit.help import sendwhatmsg
+from requests.models import encode_multipart_formdata
 import practically
 import time
 from numberguessing import *
@@ -8,7 +11,7 @@ import os
 import webbrowser
 # import datetime
 from commands import *
-
+numbers = {'daddy' : '+918125883744', 'mummy' : '+9247241312'}
 if __name__ == '__main__':
     # erros()
     wishme()
@@ -189,9 +192,18 @@ if __name__ == '__main__':
             os.system('cls')
         elif 'open explorer' in query :
             webbrowser.open('c://users/rohith')
+            os.system('cls')
         elif "create a repo" in query :
             speak('starting repository creator')
             os.startfile('github_repository_create.py')
+            os.system('cls')
+        elif 'play' in query :
+            query = query.replace('play', '')
+            pywhatkit.playonyt(query)
+            sp(f'started playing {query} on youtube')
+            os.system('cls')
+        elif 'thank' in query :
+            sp('that\'s ok')
         else :
             time.sleep(1)
-            os.system('clear()')
+            os.system('cls')
