@@ -41,17 +41,4 @@ def refresh_web_page():
     pyautogui.moveTo(refresh)
     pyautogui.click()
 
-def whatsapp_joiner() :
-    os.startfile("C:\\Users\\rohit\\Desktop\\WhatsApp Desktop.lnk")
-    profile = pyautogui.locateCenterOnScreen('profile.png')
-    meet_link = pyautogui.locateCenterOnScreen()
-    zoom_link = pyautogui.locateCenterOnScreen()
-    if meet_link is True :
-        pyautogui.moveTo(meet_link)
-        pyautogui.click()
-    elif zoom_link is True :
-        pyautogui.moveTo(zoom_link)
-        pyautogui.click()
-    else : 
-        speak('somethimg went wrong')
 
