@@ -181,13 +181,13 @@ if __name__ == '__main__':
             sp('opening the numberguessing game')
             game()
             os.system('cls')
-        elif 'class' in query :
+        elif 'join practically' in query :
             practically.join_practically()
             os.system('cls')
         elif 'instant meet' in query :
             os.startfile('meet_automate.py')
             os.system('cls')
-        elif 'refresh web page' in query :
+        elif 'refresh the web page' in query :
             refresh_web_page()
             os.system('cls')
         elif 'open explorer' in query :

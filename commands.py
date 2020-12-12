@@ -41,4 +41,6 @@ def refresh_web_page():
     pyautogui.moveTo(refresh)
     pyautogui.click()
 
-
+def switch_tab():
+	pyautogui.click()
+	pyautogui.hotkey('ctrl', 'tab')

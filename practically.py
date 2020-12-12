@@ -16,7 +16,7 @@ def join_practically() :
     login_pye = pyautogui.locateCenterOnScreen('login_pye.png')
     pyautogui.moveTo(login_pye)
     pyautogui.click()
-    speak('Loged into your account')
+    speak('Logged into your account')
     time.sleep(3)
 
     join_class = pyautogui.locateCenterOnScreen('join_class.png')
