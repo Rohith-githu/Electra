@@ -42,5 +42,13 @@ def refresh_web_page():
     pyautogui.click()
 
 def switch_tab():
-	pyautogui.click()
 	pyautogui.hotkey('ctrl', 'tab')
+
+def switch_windows():
+    pyautogui.hotkey('alt', 'tab')
+
+def notifications():
+    pyautogui.hotkey('win','a')
+
+def close_window():
+    pyautogui.hotkey('alt', 'f4')
