@@ -1,7 +1,9 @@
 import pyautogui
 from pyttsx3 import *
-import speech_recognition as sr
-import os
+try:
+    import speech_recognition as sr
+except Exception as e :
+    sp('Please check your internet connection.')
 import wikipedia
 import webbrowser
 import datetime

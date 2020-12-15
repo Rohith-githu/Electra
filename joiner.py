@@ -1,8 +1,6 @@
 import subprocess
 import pyautogui
 import time
-import pandas as pd
-from datetime import datetime
 from pyttsx3 import speak
 def sign_in(meeting_id, password) :
     subprocess.call("C:\\Users\\rohit\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe")

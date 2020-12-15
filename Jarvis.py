@@ -1,15 +1,4 @@
-import pywhatkit
-from pywhatkit.help import sendwhatmsg
-from requests.models import encode_multipart_formdata
-import practically
-import time
-from numberguessing import *
-import pyttsx3
-# import speech_recognition as sr
-import os
-# import wikipedia
-import webbrowser
-# import datetime
+from lib import *
 from commands import *
 numbers = {'daddy' : '+918125883744', 'mummy' : '+9247241312'}
 if __name__ == '__main__':
