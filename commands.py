@@ -29,7 +29,7 @@ def takeCommand() :
         audio = r.listen(source)
     try :
         print('recognizing...')
-        query = r.recognize_google(audio, language = 'en-in')
+        query = r.recognize_google(audio, language='en-in')
         print(f'You said : {query}\n')
     except Exception as e :
         print(e)
