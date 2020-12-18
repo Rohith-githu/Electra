@@ -118,10 +118,7 @@ if __name__ == '__main__':
             speak('practically is now opened!')
             os.system('cls')
         elif 'open whatsapp' in query :
-            print('opening whatsapp...')
-            speak('opening whatsapp...')
-            webbrowser.open('https://web.whatsapp.com')
-            speak('whatsapp is now opened!')
+            pyautogui.hotkey('win', '5')
             os.system('cls')
         elif 'google' in query :
             print('searching Google.....')
