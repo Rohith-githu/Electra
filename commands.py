@@ -27,6 +27,7 @@ def takeCommand() :
     with sr.Microphone() as source :
         print('Listening...')
         audio = r.listen(source)
+        r.pause_threshold = 0.8
     try :
         print('recognizing...')
         query = r.recognize_google(audio, language='en-in')
@@ -54,3 +55,12 @@ def notifications():
 
 def close_window():
     pyautogui.hotkey('alt', 'f4')
+def unmute():
+    pyautogui.hotkey('alt', 'a')
+    pyautogui.hotkey('ctrl', 'd')
+def menu():
+    pyautogui.hotkey('win')
+def menusearch():
+    pyautogui.hotkey('win','s')
+def recents():
+    pyautogui.hotkey('win', 'tab')

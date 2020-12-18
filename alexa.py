@@ -16,19 +16,33 @@ if __name__ == '__main__':
             print(results)
             speak(results)
             os.system('cls')
-        elif 'switch window' in query:
+        elif 'witch window' in query:
             switch_windows()
-        elif 'switch tab' in query:
+            os.system('cls')
+        elif 'witch tab' in query:
             switch_tab()
+            os.system('cls')
         elif 'notification' in query:
             notifications()
+            os.system('cls')
         elif 'close window' in query:
             close_window()
+            os.system('cls')
+        elif 'unmute' in query :
+            unmute()
+            os.system('cls')
+        elif 'open start' in query :
+            menu()
+        elif 'open search' in query :
+            menusearch()
         elif 'open youtube' in query :
             print('opening youtube...')
             speak('opening youtube for you...')
             webbrowser.open('https://www.youtube.com')
             speak('yotube is opened')
+            os.system('cls')
+        elif 'show timeline' in query:
+            recents()
             os.system('cls')
         elif 'open chrome' in query :
             print('opening chrome....')
