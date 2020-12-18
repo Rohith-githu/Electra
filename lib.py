@@ -18,6 +18,10 @@ try :
     import pyttsx3
     import os
     import webbrowser
+    from bs4 import *
+    import requests
+    import pyowm
+    import schedule
 except ModuleNotFoundError as e:
     print(e)
     os.system('pip install pyautogui')
@@ -27,4 +31,8 @@ except ModuleNotFoundError as e:
     os.system('pip install pywhatkit')
     os.system('pip install pipwin')
     os.system('pipwin install pyaudio')
+    os.system('pip install bs4')
+    os.system('pip install requests')
+    os.system('pip install schedule')
+    os.system('pip install pyowm')
 

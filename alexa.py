@@ -4,6 +4,7 @@ if __name__ == '__main__':
     # erros()
     wishme()
     while True:
+        rester()
         query = takeCommand().lower()
 
         if 'wikipedia' in query :
@@ -22,6 +23,10 @@ if __name__ == '__main__':
         elif 'witch tab' in query:
             switch_tab()
             os.system('cls')
+        elif 'write' in query:
+            takeCommand()
+            confirm = takeCommand().lower()
+            write(confirm)
         elif 'notification' in query:
             notifications()
             os.system('cls')
@@ -36,38 +41,33 @@ if __name__ == '__main__':
         elif 'open search' in query :
             menusearch()
         elif 'open youtube' in query :
-            print('opening youtube...')
-            say('opening youtube for you...')
             webbrowser.open('https://www.youtube.com')
-            say('yotube is opened')
             os.system('cls')
         elif 'show timeline' in query:
             recents()
             os.system('cls')
+        elif 'minimize all' in query:
+            minimize()
+            os.system('cls')
+        elif 'open pie chart' in query :
+            os.startfile(r"C:\Users\rohit\AppData\Local\pycharm\bin\pycharm64.exe")
+            os.system('cls')
         elif 'open chrome' in query :
-            print('opening chrome....')
-            say('opening chrome....')
             webbrowser.open('chrome.exe')
-            say('chrome is opened')
             os.system('cls')
         elif 'open edge' in query :
-            print('opening msedge....')
-            say('opening msedge....')
             webbrowser.open('msedge.exe')
-            say('msedge is opened')
             os.system('cls')
         elif 'open firefox' in query :
-            print('opening firefox....')
-            say('opening firefox....')
             webbrowser.open('firefox.exe')
-            say('firefox is opened')
             os.system('cls')
         elif 'open code' in query :
-            print('opening code...')
-            say('opening code...')
             os.startfile("C:\\Users\\rohit\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe")
-            say('vscode is now opened.')
             os.system('cls')
+        elif 'open studio' in query :
+            webbrowser.open('https://studio.youtube.com/')
+        elif 'click' in query :
+            click_on_screen()
         elif 'the time' in query :
             strtime = datetime.datetime.now().strftime('%H:%M')
             print(f'the time is {strtime}')
@@ -112,55 +112,34 @@ if __name__ == '__main__':
             exit()
             os.system('cls')
         elif 'open practically' in query :
-            print('opening practically...')
-            say('opening practically...')
             webbrowser.open('https://www.practically.com')
-            say('practically is now opened!')
             os.system('cls')
         elif 'open whatsapp' in query :
             pyautogui.hotkey('win', '5')
             os.system('cls')
         elif 'google' in query :
-            print('searching Google.....')
-            say('searching Google.....')
             query = query.replace('google', '')
             webbrowser.open('https://www.google.com/search?q=' + query)
-            say(f'searched google for {query}')
             os.system('cls')
         elif 'youtube' in query :
-            print('searching YouTube....')
-            say('searching YouTube.....')
             query = query.replace('youtube', '')
             webbrowser.open('https://www.youtube.com/results?search_query=' + query)
-            say(f'Youtube google for {query}')
             os.system('cls')
         elif 'stack overflow' in query :
-            print('searching stackoverflow.....')
-            say('searching stackoverflow.....')
             query = query.replace('stack overflow', '')
             webbrowser.open('https://stackoverflow.com/search?q=' + query)
-            say(f'searched stackoverflow for {query}')
             os.system('cls')
         elif 'stackoverflow' in query :
-            print('searching stackoverflow.....')
-            say('searching stackoverflow.....')
             query = query.replace('stackoverflow', '')
             webbrowser.open('https://stackoverflow.com/search?q=' + query)
-            say(f'searched stackoverflow for {query}')
             os.system('cls')
         elif 'brainly' in query :
-            print('searching brainly.....')
-            say('searching brainly.....')
             query = query.replace('brainly', '')
             webbrowser.open('https://brainly.in/app/ask?entry=hero&q=' + query)
-            say(f'searched brainly for {query}')
             os.system('cls')
         elif 'quora' in query :
-            print('searching quora.....')
-            say('searching quora.....')
             query = query.replace('quora', '')
             webbrowser.open('https://www.quora.com/search?q=' + query)
-            say(f'searched quora for {query}')
             os.system('cls')
         elif 'github' in query :
             print('searching github.....')
@@ -198,7 +177,7 @@ if __name__ == '__main__':
             refresh_web_page()
             os.system('cls')
         elif 'open explorer' in query :
-            webbrowser.open('c://users/rohith')
+            webbrowser.open('explorer.exe')
             os.system('cls')
         elif "create a repo" in query :
             say('starting repository creator')
@@ -207,10 +186,13 @@ if __name__ == '__main__':
         elif 'play' in query :
             query = query.replace('play', '')
             pywhatkit.playonyt(query)
-            sp(f'started playing {query} on youtube')
             os.system('cls')
         elif 'thank' in query :
             sp('that\'s ok')
+        elif 'shutdown my pc' in query :
+            shutdown()
+        elif 'restart my pc' in query :
+            restart()
         else :
             time.sleep(1)
             os.system('cls')

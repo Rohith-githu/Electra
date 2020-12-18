@@ -71,3 +71,39 @@ def menusearch():
     pyautogui.hotkey('win','s')
 def recents():
     pyautogui.hotkey('win', 'tab')
+def minimize():
+    pyautogui.hotkey('win', 'm')
+def click_on_screen():
+    pyautogui.doubleClick()
+def write(para) :
+    pyautogui.write(para)
+def shutdown():
+    sp('do you really want to shut this off?')
+    takeCommand()
+    confirmation = takeCommand().lower()
+    if 'yes' in confirmation :
+        sp('leets meet next time')
+        os.system('shutdown /s /t 1')
+    elif 'no' in confirmation :
+        sp('terminating the process')
+    else :
+        sp('can you plese say that again')
+def restart():
+    sp('do you really want to restart?')
+    takeCommand()
+    confirmation = takeCommand().lower()
+    if 'yes' in confirmation :
+        sp('leet\'s meet next time')
+        os.system('shutdown /r /t 1')
+    elif 'no' in confirmation :
+        sp('terminating the process')
+    else :
+        sp('can you plese say that again')
+def rester() :
+    def job() :
+        sp('locking the pc rest your eyes for sometime')
+        pyautogui.hotkey("win", "l")
+    schedule.every(10).minutes.do(job)
+    while True :
+        schedule.run_pending()
+        time.sleep(1)
