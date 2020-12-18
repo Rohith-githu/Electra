@@ -1,6 +1,5 @@
 from lib import *
 from commands import *
-numbers = {'daddy' : '+918125883744', 'mummy' : '+9247241312'}
 if __name__ == '__main__':
     # erros()
     wishme()
@@ -17,6 +16,14 @@ if __name__ == '__main__':
             print(results)
             speak(results)
             os.system('cls')
+        elif 'switch window' in query:
+            switch_windows()
+        elif 'switch tab' in query:
+            switch_tab()
+        elif 'notification' in query:
+            notifications()
+        elif 'close window' in query:
+            close_window()
         elif 'open youtube' in query :
             print('opening youtube...')
             speak('opening youtube for you...')
