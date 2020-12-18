@@ -1,13 +1,12 @@
-import pyautogui
-from pyttsx3 import *
-try:
-    import speech_recognition as sr
-except Exception as e :
-    sp('Please check your internet connection.')
-import wikipedia
-import webbrowser
-import datetime
-
+from lib import *
+def say():
+    engine = pyttsx3.init('sapi5')
+    text = input('enter the text to convert >>> ')
+    voices = engine.getProperty('voices')
+    engine.setProperty('voice', voices[1].id)
+    engine.setProperty('rate', int(175))
+    engine.say(text)
+    engine.runAndWait()
 def wishme():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour <=12 :
@@ -27,7 +26,7 @@ def takeCommand() :
     with sr.Microphone() as source :
         print('Listening...')
         audio = r.listen(source)
-        r.pause_threshold = 0.8
+        r.pause_threshold = 1
     try :
         print('recognizing...')
         query = r.recognize_google(audio, language='en-in')
@@ -45,7 +44,7 @@ def refresh_web_page():
     pyautogui.click()
 
 def switch_tab():
-	pyautogui.hotkey('ctrl', 'tab')
+    pyautogui.hotkey('ctrl', 'tab')
 
 def switch_windows():
     pyautogui.hotkey('alt', 'tab')
