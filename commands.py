@@ -1,23 +1,31 @@
 from lib import *
-def say():
+def say(text):
     engine = pyttsx3.init('sapi5')
-    text = input('enter the text to convert >>> ')
     voices = engine.getProperty('voices')
     engine.setProperty('voice', voices[1].id)
     engine.setProperty('rate', int(175))
     engine.say(text)
     engine.runAndWait()
+
+def sp(audio):
+    print(audio)
+    engine = pyttsx3.init('sapi5')
+    voices = engine.getProperty('voices')
+    engine.setProperty('voice', voices[1].id)
+    engine.setProperty('rate', int(175))
+    engine.say(audio)
+    engine.runAndWait()
 def wishme():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour <=12 :
         print('Good morning!')
-        speak('Good morning sir, what can i help you with')
+        say('Good morning sir, what can i help you with')
     elif hour >= 12 and hour < 16 :
         print('Good afternoon!')
-        speak('Good afternoon sir, what can i help you with')
+        say('Good afternoon sir, what can i help you with')
     elif hour >= 16 and hour < 20 :
         print('Good Evening!')
-        speak('Good Evening sir, what can i help you with')
+        say('Good Evening sir, what can i help you with')
     else :
         sp('Ohh it\'s not a time to work with PC')
 def takeCommand() :
