@@ -21,7 +21,9 @@ try :
     from bs4 import *
     import requests
     import pyowm
+    import ctypes
     import schedule
+    import random
 except ModuleNotFoundError as e:
     print(e)
     os.system('pip install pyautogui')

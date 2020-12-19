@@ -46,13 +46,13 @@ def takeCommand() :
     return query
 
 def refresh_web_page():
-    import pyautogui
-    refresh = pyautogui.locateCenterOnScreen('pagerefresh.png')
-    pyautogui.moveTo(refresh)
-    pyautogui.click()
+    pyautogui.hotkey('ctrl','r')
 
 def switch_tab():
     pyautogui.hotkey('ctrl', 'tab')
+
+def full():
+    pyautogui.hotkey('f11')
 
 def switch_windows():
     pyautogui.hotkey('alt', 'tab')
@@ -75,35 +75,41 @@ def minimize():
     pyautogui.hotkey('win', 'm')
 def click_on_screen():
     pyautogui.doubleClick()
+def new_tab() :
+    pyautogui.hotkey('ctrl', 't')
 def write(para) :
     pyautogui.write(para)
 def shutdown():
     sp('do you really want to shut this off?')
-    takeCommand()
     confirmation = takeCommand().lower()
     if 'yes' in confirmation :
-        sp('leets meet next time')
+        sp('let\'s meet next time')
+        for num in range(5):
+            pyautogui.hotkey('alt', 'f4')
         os.system('shutdown /s /t 1')
     elif 'no' in confirmation :
         sp('terminating the process')
-    else :
-        sp('can you plese say that again')
 def restart():
     sp('do you really want to restart?')
-    takeCommand()
     confirmation = takeCommand().lower()
     if 'yes' in confirmation :
-        sp('leet\'s meet next time')
+        sp('let\'s meet in few moments')
+        for num in range(5):
+            pyautogui.hotkey('alt', 'f4')
         os.system('shutdown /r /t 1')
     elif 'no' in confirmation :
         sp('terminating the process')
+def lock() :
+    ctypes.windll.user32.LockWorkStation()
+def sleep() :
+    sp('do you want to sleep pc')
+    confirmation_sleep = takeCommand().lower()
+    if 'yes' in confirmation_sleep :
+        os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")
     else :
-        sp('can you plese say that again')
-def rester() :
-    def job() :
-        sp('locking the pc rest your eyes for sometime')
-        pyautogui.hotkey("win", "l")
-    schedule.every(10).minutes.do(job)
-    while True :
-        schedule.run_pending()
-        time.sleep(1)
+        sp('terminating the process')
+def  incignito():
+    webbrowser.open(random.choice(['chrome.exe', 'msedge.exe']))
+    pyautogui.hotkey('ctrl', 'shift','n')
+def close_tab():
+    pyautogui.hotkey('ctrl', 'f4')

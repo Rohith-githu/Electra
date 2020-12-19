@@ -4,7 +4,6 @@ if __name__ == '__main__':
     # erros()
     wishme()
     while True:
-        rester()
         query = takeCommand().lower()
 
         if 'wikipedia' in query :
@@ -24,9 +23,10 @@ if __name__ == '__main__':
             switch_tab()
             os.system('cls')
         elif 'write' in query:
-            takeCommand()
             confirm = takeCommand().lower()
             write(confirm)
+        elif 'new tab' in query:
+            new_tab()
         elif 'notification' in query:
             notifications()
             os.system('cls')
@@ -40,6 +40,8 @@ if __name__ == '__main__':
             menu()
         elif 'open search' in query :
             menusearch()
+        elif 'incignito mode' in query :
+            incignito()
         elif 'open youtube' in query :
             webbrowser.open('https://www.youtube.com')
             os.system('cls')
@@ -88,24 +90,6 @@ if __name__ == '__main__':
             exit()
             os.system('cls')
         elif query == 'bhai' :
-            print('bye sir lets meet next time')
-            say('bye sir lets meet next time')
-            time.sleep(1)
-            exit()
-            os.system('cls')
-        elif 'quit' in query :
-            print('bye sir lets meet next time')
-            say('bye sir lets meet next time')
-            time.sleep(1)
-            exit()
-            os.system('cls')
-        elif 'exit' in query :
-            print('bye sir lets meet next time')
-            say('bye sir lets meet next time')
-            time.sleep(1)
-            exit()
-            os.system('cls')
-        elif 'close' in query :
             print('bye sir lets meet next time')
             say('bye sir lets meet next time')
             time.sleep(1)
@@ -173,7 +157,7 @@ if __name__ == '__main__':
         elif 'instant meet' in query :
             os.startfile('meet_automate.py')
             os.system('cls')
-        elif 'refresh the web page' in query :
+        elif 'refresh' in query :
             refresh_web_page()
             os.system('cls')
         elif 'open explorer' in query :
@@ -193,6 +177,19 @@ if __name__ == '__main__':
             shutdown()
         elif 'restart my pc' in query :
             restart()
+        elif 'full screen' in query :
+            full()
+        elif 'shutdown my pc' in query :
+            shutdown()
+        elif 'shut down my pc' in query:
+            shutdown()
+        elif 'restart my pc' in query :
+            restart()
+        elif 'lock me' in query :
+            lock()
+            os.system('cls')
+        elif 'sleep my pc' in query :
+            sleep()
         else :
             time.sleep(1)
             os.system('cls')

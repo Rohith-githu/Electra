@@ -1,1 +1,0 @@
-pythonw alexa.py
