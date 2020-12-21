@@ -1,6 +1,7 @@
 import subprocess
 import pyautogui
 import time
+from commands import *
 from pyttsx3 import speak
 def sign_in(meeting_id, password) :
     subprocess.call("C:\\Users\\rohit\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe")
@@ -25,7 +26,7 @@ def sign_in(meeting_id, password) :
     pyautogui.write(password)
     pyautogui.press('enter')
     time.sleep(3)
-    speak('joined meeting')
+    say('joined meeting')
 
 id_meeting = input("Enter the meeting id ")
 password = input("Enter the password ")

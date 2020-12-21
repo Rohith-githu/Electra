@@ -1,23 +1,31 @@
 from lib import *
-def say():
+def say(text):
     engine = pyttsx3.init('sapi5')
-    text = input('enter the text to convert >>> ')
     voices = engine.getProperty('voices')
     engine.setProperty('voice', voices[1].id)
     engine.setProperty('rate', int(175))
     engine.say(text)
     engine.runAndWait()
+
+def sp(audio):
+    print(audio)
+    engine = pyttsx3.init('sapi5')
+    voices = engine.getProperty('voices')
+    engine.setProperty('voice', voices[1].id)
+    engine.setProperty('rate', int(175))
+    engine.say(audio)
+    engine.runAndWait()
 def wishme():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour <=12 :
         print('Good morning!')
-        speak('Good morning sir, what can i help you with')
+        say('Good morning sir, what can i help you with')
     elif hour >= 12 and hour < 16 :
         print('Good afternoon!')
-        speak('Good afternoon sir, what can i help you with')
+        say('Good afternoon sir, what can i help you with')
     elif hour >= 16 and hour < 20 :
         print('Good Evening!')
-        speak('Good Evening sir, what can i help you with')
+        say('Good Evening sir, what can i help you with')
     else :
         sp('Ohh it\'s not a time to work with PC')
 def takeCommand() :
@@ -38,13 +46,13 @@ def takeCommand() :
     return query
 
 def refresh_web_page():
-    import pyautogui
-    refresh = pyautogui.locateCenterOnScreen('pagerefresh.png')
-    pyautogui.moveTo(refresh)
-    pyautogui.click()
+    pyautogui.hotkey('ctrl','r')
 
 def switch_tab():
     pyautogui.hotkey('ctrl', 'tab')
+
+def full():
+    pyautogui.hotkey('f11')
 
 def switch_windows():
     pyautogui.hotkey('alt', 'tab')
@@ -63,3 +71,45 @@ def menusearch():
     pyautogui.hotkey('win','s')
 def recents():
     pyautogui.hotkey('win', 'tab')
+def minimize():
+    pyautogui.hotkey('win', 'm')
+def click_on_screen():
+    pyautogui.doubleClick()
+def new_tab() :
+    pyautogui.hotkey('ctrl', 't')
+def write(para) :
+    pyautogui.write(para)
+def shutdown():
+    sp('do you really want to shut this off?')
+    confirmation = takeCommand().lower()
+    if 'yes' in confirmation :
+        sp('let\'s meet next time')
+        for num in range(5):
+            pyautogui.hotkey('alt', 'f4')
+        os.system('shutdown /s /t 1')
+    elif 'no' in confirmation :
+        sp('terminating the process')
+def restart():
+    sp('do you really want to restart?')
+    confirmation = takeCommand().lower()
+    if 'yes' in confirmation :
+        sp('let\'s meet in few moments')
+        for num in range(5):
+            pyautogui.hotkey('alt', 'f4')
+        os.system('shutdown /r /t 1')
+    elif 'no' in confirmation :
+        sp('terminating the process')
+def lock() :
+    ctypes.windll.user32.LockWorkStation()
+def sleep() :
+    sp('do you want to sleep pc')
+    confirmation_sleep = takeCommand().lower()
+    if 'yes' in confirmation_sleep :
+        os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")
+    else :
+        sp('terminating the process')
+def  incignito():
+    webbrowser.open(random.choice(['chrome.exe', 'msedge.exe']))
+    pyautogui.hotkey('ctrl', 'shift','n')
+def close_tab():
+    pyautogui.hotkey('ctrl', 'f4')

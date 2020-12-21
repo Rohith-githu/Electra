@@ -2,6 +2,7 @@ import webbrowser
 import pyautogui
 import time
 from pyttsx3 import *
+from commands import *
 def repository(name) :
     ask_path = input("Please enter the path to clone the github repository: ")
     webbrowser.open('https://www.github.com')
@@ -25,4 +26,4 @@ def repository(name) :
     pyautogui.click()
 name = input('Enter the repository name :')
 repository(name)
-speak(f'Github repository created as {name}')
+say(f'Github repository created as {name}')

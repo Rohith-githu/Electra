@@ -1,7 +1,7 @@
 import pyautogui
 import time
 import webbrowser
-from pyttsx3 import *
+from commands import *
 def main():
     webbrowser.open('https://meet.google.com')
     time.sleep(5)
@@ -18,10 +18,10 @@ def main():
     pyautogui.moveTo(join_btn)
     pyautogui.click()
     time.sleep(5)
-    speak('meeting joined')
+    say('meeting joined')
     copy_btn = pyautogui.locateCenterOnScreen('copy_info.png')
     pyautogui.moveTo(copy_btn)
     pyautogui.click()
-    speak('meeting info copied to clipboard')
+    say('meeting info copied to clipboard')
 
 main()
