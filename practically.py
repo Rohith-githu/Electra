@@ -1,13 +1,15 @@
 import pyautogui, webbrowser
 import time
 from pyttsx3 import *
+from commands import *
 
 def join_practically() :
     time.sleep(3)
     webbrowser.open('https://www.practically.com')
     time.sleep(2)
     say('Opened practically.com')
-    time.sleep(8)
+    time.sleep(5)
+	
     login = pyautogui.locateCenterOnScreen('login_p.png')
     pyautogui.moveTo(login)
     pyautogui.click()
@@ -17,7 +19,7 @@ def join_practically() :
     pyautogui.moveTo(login_pye)
     pyautogui.click()
     say('Logged into your account')
-    time.sleep(3)
+    time.sleep(2)
 
     join_class = pyautogui.locateCenterOnScreen('join_class.png')
     pyautogui.moveTo(join_class)

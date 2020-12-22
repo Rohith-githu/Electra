@@ -1,4 +1,5 @@
 from lib import *
+import pyttsx3
 def say(text):
     engine = pyttsx3.init('sapi5')
     voices = engine.getProperty('voices')
