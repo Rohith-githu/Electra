@@ -16,10 +16,10 @@ if __name__ == '__main__':
             print(results)
             say(results)
             os.system('cls')
-        elif 'witch window' in query:
+        elif 'which window' in query:
             switch_windows()
             os.system('cls')
-        elif 'witch tab' in query:
+        elif 'which tab' in query:
             switch_tab()
             os.system('cls')
         elif 'write' in query:
