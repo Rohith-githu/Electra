@@ -190,6 +190,8 @@ if __name__ == '__main__':
             os.system('cls')
         elif 'sleep my pc' in query :
             sleep()
+        elif 'leave meet' in query :
+            pyautogui.hotkey('alt','f4')
+            pyautogui.press('enter')
         else :
-            time.sleep(1)
             os.system('cls')
