@@ -35,7 +35,6 @@ if __name__ == '__main__':
             os.system('cls')
         elif 'unmute' in query :
             unmute()
-            os.system('cls')
         elif 'open start' in query :
             menu()
         elif 'open search' in query :
@@ -193,5 +192,7 @@ if __name__ == '__main__':
         elif 'leave meet' in query :
             pyautogui.hotkey('alt','f4')
             pyautogui.press('enter')
+        elif 'screenshot' in query :
+            pyautogui.screenshot()
         else :
             os.system('cls')
