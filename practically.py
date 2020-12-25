@@ -1,31 +1,37 @@
-import pyautogui, webbrowser
+from selenium import webdriver
 import time
 from pyttsx3 import *
-from commands import *
+def practically():
+    chrome_options = webdriver.ChromeOptions()
+    prefs = {"profile.default_content_setting_values.notifications" : 2}
+    chrome_options.add_experimental_option("prefs",prefs)
+    driver = webdriver.Chrome(chrome_options=chrome_options)
+    try :
+        driver.get('https://www.practically.com')
+        print('practically opened')
+    except Exception as e :
+        print(e)
+        speak('error occoured while opening practically.com')
+        print('error occoured while opening practically.com')
 
-def join_practically() :
-    time.sleep(3)
-    webbrowser.open('https://www.practically.com')
-    time.sleep(2)
-    say('Opened practically.com')
-    time.sleep(5)
-	
-    login = pyautogui.locateCenterOnScreen('login_p.png')
-    pyautogui.moveTo(login)
-    pyautogui.click()
     time.sleep(1)
-
-    login_pye = pyautogui.locateCenterOnScreen('login_pye.png')
-    pyautogui.moveTo(login_pye)
-    pyautogui.click()
-    say('Logged into your account')
+    try :
+        driver.find_element_by_link_text('Login').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('//*[@id="LoginID"]').send_keys('bpt0257')
+        driver.find_element_by_xpath('//*[@id="password"]').send_keys('rohith2078')
+        driver.find_element_by_xpath('//*[@id="loginform"]/div[5]/button').click()
+        print('loged in successfully')
+    except Exception as e:
+        print(e)
+        print('error occoured while logging in')
+        speak('error occoured while logging in')
     time.sleep(2)
-
-    join_class = pyautogui.locateCenterOnScreen('join_class.png')
-    pyautogui.moveTo(join_class)
-    pyautogui.click()
-
-    say('Entered the class')
-
-
-# join_practically()
+    try :
+        driver.find_element_by_xpath('//*[@id="upcoming"]/div[2]/div/div[2]/div[3]/a').click()
+        print('class joined')
+        speak('class joined')
+    except Exception as e:
+        print(e)
+        print('error occoured while joining the class')
+        speak('error occoured while joining the class')

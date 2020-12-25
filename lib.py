@@ -12,7 +12,7 @@ try :
     import pywhatkit
     from pywhatkit.help import sendwhatmsg
     from requests.models import encode_multipart_formdata
-    import practically
+    from practically import practically
     import time
     from numberguessing import *
     import pyttsx3

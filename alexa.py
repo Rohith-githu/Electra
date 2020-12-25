@@ -151,7 +151,7 @@ if __name__ == '__main__':
             game()
             os.system('cls')
         elif 'join practically' in query :
-            practically.join_practically()
+            practically()
             os.system('cls')
         elif 'instant meet' in query :
             os.startfile('meet_automate.py')
