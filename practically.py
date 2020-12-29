@@ -1,5 +1,6 @@
 from selenium import webdriver
 import time
+from commands import *
 from pyttsx3 import *
 def practically():
     chrome_options = webdriver.ChromeOptions()
@@ -11,7 +12,7 @@ def practically():
         print('practically opened')
     except Exception as e :
         print(e)
-        speak('error occoured while opening practically.com')
+        say('error occoured while opening practically.com')
         print('error occoured while opening practically.com')
 
     time.sleep(1)
@@ -25,13 +26,13 @@ def practically():
     except Exception as e:
         print(e)
         print('error occoured while logging in')
-        speak('error occoured while logging in')
+        say('error occoured while logging in')
     time.sleep(2)
     try :
         driver.find_element_by_xpath('//*[@id="upcoming"]/div[2]/div/div[2]/div[3]/a').click()
         print('class joined')
-        speak('class joined')
+        say('class joined')
     except Exception as e:
         print(e)
         print('error occoured while joining the class')
-        speak('error occoured while joining the class')
+        say('error occoured while joining the class')

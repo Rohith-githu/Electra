@@ -2,21 +2,13 @@ from lib import *
 import pyttsx3
 
 def say(text):
-    engine = pyttsx3.init('sapi5')
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[1].id)
-    engine.setProperty('rate', int(175))
-    engine.say(text)
-    engine.runAndWait()
+	import win32com.client as mouth
+	voice = mouth.Dispatch("SAPI.SpVoice")
+	voice.Speak(text)
 
 def sp(audio):
     print(audio)
-    engine = pyttsx3.init('sapi5')
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[1].id)
-    engine.setProperty('rate', int(175))
-    engine.say(audio)
-    engine.runAndWait()
+    say(audio)
 def wishme():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour <=12 :

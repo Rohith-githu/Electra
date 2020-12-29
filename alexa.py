@@ -153,6 +153,9 @@ if __name__ == '__main__':
         elif 'join practically' in query :
             practically()
             os.system('cls')
+        elif 'john practically' in query :
+            practically()
+            os.system('cls')
         elif 'instant meet' in query :
             os.startfile('meet_automate.py')
             os.system('cls')
