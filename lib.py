@@ -2,10 +2,7 @@ import os
 try :
     import pyautogui
     from pyttsx3 import *
-    try:
-        import speech_recognition as sr
-    except Exception as e :
-        sp('Please check your internet connection.')
+    import speech_recognition as sr
     import wikipedia
     import webbrowser
     import datetime
@@ -24,6 +21,7 @@ try :
     import ctypes
     import schedule
     import random
+    import json
 except ModuleNotFoundError as e:
     print(e)
     os.system('pip install pyautogui')

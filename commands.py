@@ -1,5 +1,8 @@
 from lib import *
 import pyttsx3
+import json
+with open('settings.json') as f:
+    data = json.load(f)
 
 def say(text):
 	import win32com.client as mouth
@@ -28,10 +31,10 @@ def takeCommand() :
     with sr.Microphone() as source :
         print('Listening...')
         audio = r.listen(source)
-        r.pause_threshold = 1
+        r.pause_threshold = 0.6
     try :
         print('recognizing...')
-        query = r.recognize_google(audio, language='en-in')
+        query = r.recognize_google(audio, language=data['language'])
         print(f'You said : {query}\n')
     except Exception as e :
         print(e)
