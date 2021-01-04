@@ -1,13 +1,15 @@
 from lib import *
 import pyttsx3
 import json
+from gtts import gTTS 
+import playsound
 with open('settings.json') as f:
     data = json.load(f)
 
 def say(text):
-	import win32com.client as mouth
-	voice = mouth.Dispatch("SAPI.SpVoice")
-	voice.Speak(text)
+    m = pyttsx3.init()
+    m.say(text)
+    m.runAndWait()
 
 def sp(audio):
     print(audio)
@@ -30,8 +32,8 @@ def takeCommand() :
     r = sr.Recognizer()
     with sr.Microphone() as source :
         print('Listening...')
-        audio = r.listen(source)
-        r.pause_threshold = 0.6
+        audio = r.listen(source) 
+        r.pause_threshold = 0.8
     try :
         print('recognizing...')
         query = r.recognize_google(audio, language=data['language'])
@@ -110,3 +112,5 @@ def  incignito():
     pyautogui.hotkey('ctrl', 'shift','n')
 def close_tab():
     pyautogui.hotkey('ctrl', 'f4')
+def wakeword():
+    wake_words = ['alexa', 'elaxa', 'hey', 'hi alexa', 'lexa', 'okay', 'ok','computers','help', 'bored', 'wake']
