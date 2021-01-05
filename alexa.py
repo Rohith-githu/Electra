@@ -6,7 +6,7 @@ if __name__ == '__main__':
     wishme()
     while True:
         query = takeCommand().lower()
-        if 'alexa' in query:
+        if 'electra' in query:
             say('How can i help you?')
             query = takeCommand().lower()
             if 'wikipedia' in query :
