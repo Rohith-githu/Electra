@@ -7,9 +7,9 @@ with open('settings.json') as f:
     data = json.load(f)
 
 def say(text):
-    m = pyttsx3.init()
-    m.say(text)
-    m.runAndWait()
+    tts = gTTS(text, slow = False)
+    tts.save('tts.mp3')
+    playsound.playsound('tts.mp3')
 
 def sp(audio):
     print(audio)
